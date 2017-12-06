@@ -1,0 +1,11 @@
+<form (submit)="onCreateSubmit()" class="form-inline">
+  <div class="form-group">
+    <input type="text" [(ngModel)]="content" name="content" class="form-control" placeholder="Tarefa">
+  </div>
+  <input type="submit" class="btn btn-primary" value="Criar tarefa">
+</form>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let task of tasks">
+    {{task.content}} <div class="text-right col-offset-11"><button class="btn btn-success btn-xs" (click)="onDeleteClick(task._id)"><span class="glyphicon glyphicon-ok"></span></button></div>
+  </li>
+</ul>

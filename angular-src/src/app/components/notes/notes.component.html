@@ -1,0 +1,16 @@
+<form (submit)="onCreateSubmit()" class="form-inline">
+  <div class="form-group">
+    <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Título">
+  </div>
+  <div class="form-group">
+    <input type="text" [(ngModel)]="content" name="content" class="form-control" placeholder="Conteúdo">
+  </div>
+  <input type="submit" class="btn btn-primary" value="Criar nota">
+</form>
+<div *ngFor="let note of notes">
+  <h2 class="page-header">{{note.title}}</h2>
+  <ul class="list-group">
+    <li class="list-group-item">{{note.content}}</li>
+  </ul>
+  <button class="btn btn-danger" (click)="onDeleteClick(note._id)">Deletar nota</button>
+</div>

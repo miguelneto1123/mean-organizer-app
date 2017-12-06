@@ -1,0 +1,22 @@
+<div class="jumbotron text-center">
+  <h1>Get Your Shit Together!</h1>
+  <p class="lead">All in one place, so it's together</p>
+  <div>
+    <a *ngIf="!authService.loggedIn()" [routerLink]="['/register']" class="btn btn-primary">Registrar</a> <a *ngIf="!authService.loggedIn()" [routerLink]="['/login']" class="btn btn-info">Entrar</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 text-center">
+    <h3>Organize!</h3>
+    <p>Calendário, bloco de notas, <em>checklist</em>, controle de faltas...</p>
+  </div>
+  <div class="col-md-4 text-center">
+    <h3>Completo</h3>
+    <p>Chega de vários apps, esse tem tudo que você precisa</p>
+  </div>
+  <div class="col-md-4 text-center">
+    <h3>Seguro</h3>
+    <p>Sua conta é seu espaço pessoal, guardado e protegido</p>
+  </div>
+</div>
